@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="courses">
+        <h1 class="heading">Lịch sử các bài học</h1>
+        <div class="box-container">
+           <div class="box">
+              <a href="playlist.html" class="bai-viet" id="lich-su"><ul >HTML cơ bản</ul></a>
+              <a href="playlist.html" class="bai-viet" id="lich-su"><ul >CSS cơ bản</ul></a>
+              <a href="playlist.html" class="bai-viet" id="lich-su"><ul >SQL cơ bản</ul></a>
+           </div>
+        </div>
+     </section>
+
+     <div id="history"></div>
+    <script>
+        // Lấy thẻ div từ HTML
+let div = document.getElementById("history");
+
+// Lấy tất cả các thẻ a bài viết từ HTML
+let links = document.querySelectorAll(".bai-viet");
+
+
+
+// Thêm hàm xử lý sự kiện cho từng liên kết
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function(event) {
+    // event.preventDefault(); // Ngăn chặn chuyển trang khi nhấn vào liên kết
+    
+    // Lấy giá trị của thuộc tính data-id từ thẻ a
+    let id = this.getAttribute("href");
+    
+    // Tạo nội dung cho phần tử hiển thị thông tin bài viết
+    let content = document.createElement("p");
+    content.textContent = "Thông tin bài viết có mã số là " + id;
+    
+    // Xóa nội dung cũ và thêm nội dung mới vào phần tử div
+    // div.innerHTML = "";
+    div.appendChild(content);
+  });
+if (sessionStorage.getItem("history")) {
+  // Nếu có, hiển thị dữ liệu đó trong phần tử HTML
+  content.innerHTML = sessionStorage.getItem("history");
+}
+
+// Thêm hàm xử lý sự kiện cho sự kiện trình duyệt "beforeunload"
+window.addEventListener("beforeunload", function() {
+  // Lưu nội dung của phần tử HTML vào sessionStorage
+  sessionStorage.setItem("history", content.innerHTML);
+});
+
+
+}
+
+    </script>
+</body>
+</html>

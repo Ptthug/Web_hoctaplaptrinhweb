@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>watch</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+   <header class="header">
+      
+      <section class="flex">
+
+         <a href="home.html" class="logo">Web Learning</a>
+
+         <form action="" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="tìm kiếm..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">Nguyen Van A</h3>
+            <p class="role">Học sinh</p>
+            <a href="profile.html" class="btn">Thông tin tài khoản</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">Đăng nhập</a>
+               <a href="register.html" class="option-btn">Đăng ký</a>
+            </div>
+         </div>
+
+      </section>
+
+   </header>   
+
+   <div class="side-bar">
+
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Nguyen Van A</h3>
+         <p class="role">Học sinh</p>
+         <a href="profile.html" class="btn">Thông tin tài khoản</a>
+      </div>
+
+      <nav class="navbar">
+         <a href="home.html"><i class="fas fa-home"></i><span>Trang chủ</span></a>
+         <a href=""><i class="fas fa-question"></i><span>Về chúng tôi</span></a>
+         <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Bài học</span></a>
+         <a href=""><i class="fas fa-chalkboard-user"></i><span>Giáo viên</span></a>
+         <a href="contact.html"><i class="fas fa-headset"></i><span>Liên hệ</span></a>
+      </nav>
+
+   </div>
+
+<section class="watch-video">
+
+   <div class="video-container">
+      <div class="video">
+         <video src="images/Attribute trong HTML.mp4" controls poster="images/post-1-4.png" id="video"></video>
+      </div>
+      <h3 class="title">HTML cơ bản (part 04)</h3>
+      <div class="info">
+         <p class="date"><i class="fas fa-calendar"></i><span>10-11-2022</span></p>
+         <p class="date"><i class="fas fa-heart"></i><span>70 likes</span></p>
+      </div>
+      <div class="tutor">
+         <img src="images/pic-2.jpg" alt="">
+         <div>
+            <h3>Phạm Thị H</h3>
+            <span>Developer</span>
+         </div>
+      </div>
+      <form action="" method="post" class="flex">
+         <a href="playlist.html" class="inline-btn">Xem danh sách videos</a> 
+         <button><i class="far fa-heart"></i><span>like</span></button>
+      </form>
+      <form action="" method="post" class="flex">
+         <form action="" method="post" class="flex">
+         <a href="watch-video4.html" class="inline-btn">Chuyển đến video sau</a>
+         <a href="watch-video2.html" class="inline-btn">Chuyển về video trước</a>
+      </form>
+      </form>
+      <p class="description">
+         Chúc mọi người xem video vui vẻ!
+      </p>
+   </div>
+
+</section>
+<footer class="footer">
+
+   &copy; copyright @ 2022 by <span>LTWEB</span> | all rights reserved!
+
+</footer>
+
+<script src="js/script.js"></script>
+   
+</body>
+</html>
